@@ -1,0 +1,31 @@
+import React, { Fragment } from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Header from './components/Header.jsx'
+
+import './index.css'
+
+// 各 route 頁面
+import HomePage from './containers/HomePage.jsx'
+import LifeCircleTry from './containers/LifeCircleTry.jsx'
+import ChildrenRender from './containers/ChildrenRender.jsx'
+import UseMemo from './containers/UseMemo.jsx'
+import UseCallback from './containers/UseCallback.jsx'
+
+function App() {
+    return (
+        <Fragment>
+            <BrowserRouter>
+                <Header></Header>
+                <Routes>
+                    <Route path="/" element={<HomePage />} />
+                    <Route path="/LifeCircleTry" element={<LifeCircleTry />} />
+                    <Route path="/ChildrenRender" element={<ChildrenRender />} />
+                    <Route path="/UseMemo" element={<UseMemo />} />
+                    <Route path="/UseCallback" element={<UseCallback />} />
+                </Routes>
+            </BrowserRouter>
+        </Fragment>
+    )
+}
+
+export default App
