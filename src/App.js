@@ -10,6 +10,7 @@ import LifeCircleTry from './containers/LifeCircleTry.jsx'
 import ChildrenRender from './containers/ChildrenRender.jsx'
 import UseMemo from './containers/UseMemo.jsx'
 import UseCallback from './containers/UseCallback.jsx'
+import UseState from './containers/UseState.jsx'
 
 function App() {
     return (
@@ -22,6 +23,7 @@ function App() {
                     <Route path="/ChildrenRender" element={<ChildrenRender />} />
                     <Route path="/UseMemo" element={<UseMemo />} />
                     <Route path="/UseCallback" element={<UseCallback />} />
+                    <Route path="/UseState" element={<UseState />} />
                 </Routes>
             </BrowserRouter>
         </Fragment>

@@ -4,6 +4,7 @@ const routesList = [
     { title: 'ChildrenRender', path: '/ChildrenRender' },
     { title: 'UseMemo', path: '/UseMemo' },
     { title: 'UseCallback', path: '/UseCallback' },
+    { title: 'UseState', path: '/UseState' },
 ]
 
 export { routesList }
