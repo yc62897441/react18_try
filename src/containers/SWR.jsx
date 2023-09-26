@@ -8,7 +8,10 @@ const UseStateWrapper = styled.div`
 
 const fetcher = (url) =>
     axios.get(url).then((result) => {
-        console.log('Page component SWR: fetch data 1', url)
+        // console.log('Page component SWR: fetch data 1', url)
+        // console.log('result', result)
+        console.log('SWR', new Date().toString())
+        result.data.products[0].title = new Date().toString()
         return result
     })
 
@@ -24,7 +27,10 @@ function SWR() {
             <div>
                 <h1>使用 swr 來打 API 取得資料</h1>
                 <h3>第一次進入畫面時，因 data 尚不存在，所以會顯示 loading。</h3>
-                <h3>第二次進入畫面時，因 data 已經有被暫存，所以會直接顯示 data 渲染的內容。</h3>
+                <h3>
+                    第二次進入畫面時，因 data 已經有被暫存，所以會直接顯示 data
+                    渲染的內容。另外，再去打一次 API，取得更新的資料。
+                </h3>
                 <h3>
                     如果是使用 useEffect 搭配 axios 來打 API 取得資料，之後存到 useState
                     中，就不會有暫存機制。每次進到頁面時，data 都是不存在的，所以都會顯示 loading。

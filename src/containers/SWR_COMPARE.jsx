@@ -16,7 +16,9 @@ function SWR_COMPARE() {
 
         async function fetch() {
             try {
-                console.log('SWR_COMPARE fetch data')
+                // console.log('SWR_COMPARE fetch data')
+                console.log('SWR_COMPARE', new Date().toString())
+
                 const result = await axios.get(APIUrl)
                 setData(result)
             } catch (error) {
